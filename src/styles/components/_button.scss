@@ -1,0 +1,27 @@
+@import '../variables';
+
+.button_dark,
+.button_yellow {
+    cursor: pointer;
+    background-color: $dark;
+    color: $light;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 72px;
+    width: fit-content;
+    border: 0;
+    border-radius: 4px;
+}
+
+.button_yellow {
+    background-color: $yellow;
+    color: $dark;
+}
+
+@media (max-width: 500px) {
+
+    .button_dark,
+    .button_yellow {
+        width: 100%;
+    }
+}
