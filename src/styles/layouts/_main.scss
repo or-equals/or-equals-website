@@ -250,7 +250,7 @@
 
 @media (max-width: 1226px) {
     .main {
-        margin: 200px 20px;
+        margin: 200px 40px;
         flex-direction: column;
     }
 
@@ -267,10 +267,8 @@
     }
 
     .service {
-        margin-top: 40px;
-
-        &:first-child {
-            margin-top: 0;
+        &:last-child {
+            margin-top: 40px;
         }
     }
 
@@ -316,6 +314,16 @@
     }
 }
 
+@media (max-width: 840px) {
+    .service {
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
 @media (max-width: 600px) {
     .main {
         max-width: 100%;
@@ -324,5 +332,23 @@
 
     .testimony {
         width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .testimonials-header {
+        flex-direction: column;
+    }
+
+    .testimonials-title {
+        margin-bottom: 20px;
+    }
+
+    .testimony-footer {
+        flex-wrap: wrap;
+    }
+
+    .user-socials {
+        margin-top: 20px;
     }
 }

@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useEmblaCarousel } from 'embla-carousel/react';
+import Fade from 'react-reveal/Fade';
 import config from 'react-reveal/globals';
 
 config({ ssrFadeout: true });
@@ -46,7 +47,9 @@ const Home = () => {
             <section className='testimonials-section'>
                 <div className='testimonials-container'>
                     <div className='testimonials-header'>
+                    <Fade bottom distance='20px' duration={400}>
                         <h2 className='testimonials-title'>Look at what our clients say about our services.</h2>
+                    </Fade>
                         <div className='testimonials-control'>
                             <button className='prev-button' onClick={scrollPrevTestimony}>
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
