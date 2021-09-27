@@ -7,8 +7,6 @@ config({ ssrFadeout: true });
 
 import Link from 'next/link';
 
-import Button from './Button';
-
 const Header = () => {
 
     const [theme, setTheme] = useState('light');
@@ -30,17 +28,18 @@ const Header = () => {
     };
 
     const scrollTop = () => {
-        scrollTo(0, 0)
+        scrollTo(0, 0);
         setTheme('light')
-    }
+    };
 
-    const scrollToId = () => {
-        setTheme('dark');
-    }
+    const scrollTopAndCloseMenu = () => {
+        scrollTo(0, 0);
+        setMenu(false);
+    };
 
-    const toggleMenu = () => {
-        menu ? setMenu(false) : setMenu(true)
-    }
+    const scrollToId = () => setTheme('dark');
+    const toggleMenu = () => menu ? setMenu(false) : setMenu(true)
+    const closeMenu = () => setMenu(false);
 
     return (
         <header className={`header_${theme}`}>
@@ -87,28 +86,36 @@ const Header = () => {
                     <div className='responsive-nav'>
                         <Link href='/'>
                             <Fade bottom distance='20px' duration={400}>
-                                <a onClick={scrollTop} className='responsive-nav__link'>Home</a>
+                                <a onClick={scrollTopAndCloseMenu} className='responsive-nav__link'>Home</a>
                             </Fade>
                         </Link>
                         <Link href='#services'>
-                            <Fade bottom distance='20px' duration={500}>
-                                <a className='responsive-nav__link'>Services</a>
-                            </Fade>
+                            <a onClick={closeMenu} className='responsive-nav__link'>
+                                <Fade bottom distance='20px' duration={500}>
+                                    Services
+                                </Fade>
+                            </a>
                         </Link>
                         <Link href='#work'>
-                            <Fade bottom distance='20px' duration={600}>
-                                <a className='responsive-nav__link'>Work</a>
-                            </Fade>
+                            <a onClick={closeMenu} className='responsive-nav__link'>
+                                <Fade bottom distance='20px' duration={600}>
+                                    Work
+                                </Fade>
+                            </a>
                         </Link>
                         <Link href='#about'>
-                            <Fade bottom distance='20px' duration={700}>
-                                <a className='responsive-nav__link'>About</a>
-                            </Fade>
+                            <a onClick={closeMenu} className='responsive-nav__link'>
+                                <Fade bottom distance='20px' duration={700}>
+                                    About
+                                </Fade>
+                            </a>
                         </Link>
                         <Link href='#contact'>
-                            <Fade bottom distance='20px' duration={800}>
-                                <a className='responsive-nav__link'>Contact</a>
-                            </Fade>
+                            <a onClick={closeMenu} className='responsive-nav__link'>
+                                <Fade bottom distance='20px' duration={800}>
+                                    Contact
+                                </Fade>
+                            </a>
                         </Link>
                     </div>
 
