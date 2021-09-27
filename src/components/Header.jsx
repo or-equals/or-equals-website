@@ -1,9 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { openPopupWidget } from 'react-calendly';
+import config from 'react-reveal/globals';
+import Fade from 'react-reveal/Fade';
+
+config({ ssrFadeout: true });
+
 import Link from 'next/link';
+
+import Button from './Button';
 
 const Header = () => {
 
     const [theme, setTheme] = useState('light');
+    const [menu, setMenu] = useState(false);
 
     useEffect(() => {
         if (typeof window != 'undefined') {
@@ -14,6 +23,12 @@ const Header = () => {
         };
     });
 
+    const openCalendly = () => {
+        openPopupWidget({
+            url: 'https://calendly.com/or-equals/30-minute-discovery-call',
+        })
+    };
+
     const scrollTop = () => {
         scrollTo(0, 0)
         setTheme('light')
@@ -21,6 +36,10 @@ const Header = () => {
 
     const scrollToId = () => {
         setTheme('dark');
+    }
+
+    const toggleMenu = () => {
+        menu ? setMenu(false) : setMenu(true)
     }
 
     return (
@@ -48,6 +67,57 @@ const Header = () => {
                     <Link href="#contact">
                         <a onClick={scrollToId} className={`nav-link_${theme}`}>Contact</a>
                     </Link>
+                </nav>
+
+                <button className='nav-toggle' onClick={toggleMenu}>
+                    {
+                        !menu
+                        ? <svg width="36" height="13" viewBox="0 0 36 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="3" rx="1.5" fill="#888888"/>
+                            <rect y="10" width="36" height="3" rx="1.5" fill="#888888"/>
+                        </svg>
+                        : <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.33203" width="36" height="3" rx="1.5" transform="rotate(45 2.33203 0)" fill="#888888"/>
+                            <rect y="25.4561" width="36" height="3" rx="1.5" transform="rotate(-45 0 25.4561)" fill="#888888"/>
+                        </svg>                        
+                    }
+                </button>
+
+                <nav className={menu ? 'responsive-menu' : 'none'}>
+                    <div className='responsive-nav'>
+                        <Link href='/'>
+                            <Fade bottom distance='20px' duration={400}>
+                                <a onClick={scrollTop} className='responsive-nav__link'>Home</a>
+                            </Fade>
+                        </Link>
+                        <Link href='#services'>
+                            <Fade bottom distance='20px' duration={500}>
+                                <a className='responsive-nav__link'>Services</a>
+                            </Fade>
+                        </Link>
+                        <Link href='#work'>
+                            <Fade bottom distance='20px' duration={600}>
+                                <a className='responsive-nav__link'>Work</a>
+                            </Fade>
+                        </Link>
+                        <Link href='#about'>
+                            <Fade bottom distance='20px' duration={700}>
+                                <a className='responsive-nav__link'>About</a>
+                            </Fade>
+                        </Link>
+                        <Link href='#contact'>
+                            <Fade bottom distance='20px' duration={800}>
+                                <a className='responsive-nav__link'>Contact</a>
+                            </Fade>
+                        </Link>
+                    </div>
+
+                    <button
+                        className='button_dark'
+                        onClick={openCalendly}
+                    >
+                        Schedule an appointment
+                    </button>
                 </nav>
             </div>
         </header>
