@@ -85,9 +85,11 @@ const Header = () => {
                 <nav className={menu ? 'responsive-menu' : 'none'}>
                     <div className='responsive-nav'>
                         <Link href='/'>
-                            <Fade bottom distance='20px' duration={400}>
-                                <a onClick={scrollTopAndCloseMenu} className='responsive-nav__link'>Home</a>
-                            </Fade>
+                            <a onClick={scrollTopAndCloseMenu} className='responsive-nav__link'>
+                                <Fade bottom distance='20px' duration={400}>
+                                    Home
+                                </Fade>
+                            </a>
                         </Link>
                         <Link href='#services'>
                             <a onClick={closeMenu} className='responsive-nav__link'>

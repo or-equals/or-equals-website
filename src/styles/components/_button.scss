@@ -52,5 +52,12 @@
     .button_dark,
     .button_yellow {
         width: 100%;
+        padding: 16px 0;
+    }
+
+    .prev-button,
+    .next-button {
+        height: 48px;
+        width: 48px;
     }
 }
