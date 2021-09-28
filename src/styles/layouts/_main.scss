@@ -274,11 +274,22 @@
 
     .embla__slide {
         margin: auto 20px;
+        flex: 0 0 100% 0;
     }
 
     .project {
         flex-direction: column;
         width: 100%;
+    }
+
+    .project-text {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: unset;
     }
 
     .embla__container {
