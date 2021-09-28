@@ -81,7 +81,15 @@ const Project = ({ name, desc, summary, videoLink }) => {
                     <p className='project-desc'>{summary}</p>
                 </Fade>
             </div>
-            <iframe className='project-video' height='340' src={videoLink} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+            <iframe 
+                className='project-video'
+                height='340' src={videoLink}
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+            >
+            </iframe>
         </div>
     );
 };
