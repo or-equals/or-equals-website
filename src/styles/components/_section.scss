@@ -87,3 +87,12 @@
         margin-top: 20px;
     }
 }
+
+
+@media (max-width: 600px) {
+
+    .section_dark,
+    .section_light {
+        padding: 120px 20px;
+    }
+}
