@@ -2,7 +2,7 @@
 
 .header_dark,
 .header_light {
-    height: 100px;
+    height: 90px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -24,7 +24,7 @@
 
 .header-container_dark,
 .header-container_light {
-    height: 100px;
+    height: 90px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
