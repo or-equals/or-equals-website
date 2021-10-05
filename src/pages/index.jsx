@@ -60,7 +60,7 @@ const Home = () => {
                 <div className='testimonials-container'>
                     <div className='testimonials-header'>
                         <Fade bottom distance='20px' duration={400}>
-                            <h2 className='testimonials-title'>Look at what our clients say about our services.</h2>
+                            <h2 className='testimonials-title'>Take a look at <span className='underline'>what our clients say</span> about our services.</h2>
                         </Fade>
                         <div className='testimonials-control'>
                             <button className='prev-button' onClick={scrollPrevTestimony}>

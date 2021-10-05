@@ -13,7 +13,7 @@ const About = () => {
         <Section
             id="about"
             theme="light"
-            title={<>A software development shop obsessed with delivering real-world business value.</>}
+            title={<>A software development shop obsessed with delivering <span className='underline'>real-world business value.</span></>}
             desc={null}
         >
             <div className='about-container'>

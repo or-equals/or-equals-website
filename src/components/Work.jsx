@@ -14,19 +14,19 @@ const Work = () => {
         speed: 20,
         loop: true
     })
-    
+
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
     }, [emblaApi])
 
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])    
+    }, [emblaApi])
     return (
         <Section
             id="work"
             theme="light"
-            title={<>Our customers streamline their tedious processes with bespoke software.</>}
+            title={<>Our customers <span className='underline'>streamline their tedious processes</span> with bespoke software.</>}
             desc="Here are a few projects that we've done over the years."
         >
             <div className='embla' ref={emblaRef}>
@@ -52,12 +52,12 @@ const Work = () => {
             <div className='projects-control'>
                 <button className='prev-button' onClick={scrollPrev}>
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8H19M8 1L1 8L8 1ZM1 8L8 15L1 8Z" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M1 8H19M8 1L1 8L8 1ZM1 8L8 15L1 8Z" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </button>
                 <button className='next-button' onClick={scrollNext}>
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 8H1M12 1L19 8L12 1ZM19 8L12 15L19 8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M19 8H1M12 1L19 8L12 1ZM19 8L12 15L19 8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </button>
             </div>
@@ -71,9 +71,9 @@ const Project = ({ name, desc, summary, videoLink }) => {
     return (
         <div className='project'>
             <div className='project-text'>
-            <Fade bottom distance='20px' duration={400}>
-                <h3 className='project-title'>{name}</h3>
-            </Fade>
+                <Fade bottom distance='20px' duration={400}>
+                    <h3 className='project-title'>{name}</h3>
+                </Fade>
                 <Fade bottom distance='20px' duration={800}>
                     <p className='project-desc'>{desc}</p>
                 </Fade>
@@ -81,7 +81,7 @@ const Project = ({ name, desc, summary, videoLink }) => {
                     <p className='project-desc'>{summary}</p>
                 </Fade>
             </div>
-            <iframe 
+            <iframe
                 className='project-video'
                 height='340' src={videoLink}
                 title='YouTube video player'
