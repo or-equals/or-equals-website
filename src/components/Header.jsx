@@ -80,18 +80,20 @@ const Header = ({ mainHeight }) => {
                 </nav>
 
                 <button className='nav-toggle' onClick={toggleMenu}>
-                    {
-                        !menu
-                            ? <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="36" height="3" rx="1.5" fill="#888888" />
-                                <rect y="10" width="36" height="3" rx="1.5" fill="#888888" />
-                                <rect y="20" width="36" height="3" rx="1.5" fill="#888888" />
-                            </svg>
-                            : <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.33203" width="36" height="3" rx="1.5" transform="rotate(45 2.33203 0)" fill="#888888" />
-                                <rect y="25.4561" width="36" height="3" rx="1.5" transform="rotate(-45 0 25.4561)" fill="#888888" />
-                            </svg>
-                    }
+                    <span>
+                        {
+                            !menu
+                                ? <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="3" rx="1.5" fill="#888888" />
+                                    <rect y="10" width="36" height="3" rx="1.5" fill="#888888" />
+                                    <rect y="20" width="36" height="3" rx="1.5" fill="#888888" />
+                                </svg>
+                                : <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.33203" width="36" height="3" rx="1.5" transform="rotate(45 2.33203 0)" fill="#888888" />
+                                    <rect y="25.4561" width="36" height="3" rx="1.5" transform="rotate(-45 0 25.4561)" fill="#888888" />
+                                </svg>
+                        }
+                    </span>
                 </button>
 
                 <nav className={menu ? 'responsive-menu' : 'none'}>
