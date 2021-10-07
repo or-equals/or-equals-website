@@ -283,10 +283,6 @@
         max-width: fit-content;
     }
 
-    .main-desc {
-        margin: 20px 0;
-    }
-
     .services-container {
         margin-top: 80px;
     }
@@ -364,6 +360,10 @@
         &:first-child {
             margin-top: 0;
         }
+    }
+
+    .main-desc {
+        margin: 20px 0;
     }
 
     .testimonials-header {
