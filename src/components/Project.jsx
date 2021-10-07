@@ -12,11 +12,11 @@ const Project = ({ name, desc, videoLink }) => {
                 <Fade bottom distance='20px' duration={200}>
                     <h3 className='project-title'>{name}</h3>
                 </Fade>
-                <Fade bottom distance='20px' duration={400}>
+                <Fade bottom distance='20px' duration={300}>
                     <div className='project-desc'>{desc}</div>
                 </Fade>
             </div>
-            <Fade bottom distance='20px' duration={800}>
+            <Fade bottom distance='20px' duration={400}>
                 <iframe
                     className='project-video'
                     height='340' src={videoLink}

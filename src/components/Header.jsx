@@ -7,15 +7,17 @@ config({ ssrFadeout: true });
 
 import Link from 'next/link';
 
-const Header = () => {
+const Header = ({ mainHeight }) => {
 
     const [theme, setTheme] = useState('light');
     const [menu, setMenu] = useState(false);
 
+    // Change color based on height value = margin.
     useEffect(() => {
         if (typeof window != 'undefined') {
+
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 639) setTheme('dark');
+                if (window.scrollY > mainHeight + 280) setTheme('dark');
                 else setTheme('light');
             });
         };

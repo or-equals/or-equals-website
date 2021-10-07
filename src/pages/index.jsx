@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import config from 'react-reveal/globals';
 import { createClient } from 'contentful';
 
@@ -14,11 +15,22 @@ import Header from '../components/Header';
 
 const Home = ({ projects, testimonies }) => {
 
+    // Get height of <Main /> and send it to header.
+    const [height, setHeight] = useState();
+    const mainRef = useRef();
+
+    useEffect(() => {
+        setHeight(mainRef.current.clientHeight);
+        console.log(height);
+    });
+
     return (
         <>
             <MetaHead />
-            <Header />
-            <Main />
+            <Header mainHeight={height} />
+            <div ref={mainRef}>
+                <Main />
+            </div>
             <Services />
             <Work items={projects} />
             <About />
@@ -32,7 +44,6 @@ export default Home;
 
 
 // Get data from CMS
-
 export async function getStaticProps() {
 
     const contentfulClient = createClient({

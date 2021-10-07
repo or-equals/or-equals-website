@@ -42,12 +42,10 @@
 
 .header-logo_light {
     fill: $dark;
-    transition: .2s;
 }
 
 .header-logo_dark {
     fill: $light;
-    transition: .2s;
 }
 
 .nav {
@@ -61,6 +59,7 @@
     text-decoration: none;
     margin-left: 30px;
     position: relative;
+    transition: .2s;
 
     &::before {
         content: '/';
@@ -72,6 +71,10 @@
         &::before {
             content: '';
         }
+    }
+
+    &:hover {
+        color: $yellow;
     }
 }
 

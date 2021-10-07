@@ -53,6 +53,7 @@
 
 .section-svg_dark {
     margin: 8px 0 0 0;
+    min-width: 14px;
 
     path {
         stroke: $light;
@@ -61,6 +62,7 @@
 
 .section-svg_light {
     margin: 8px 0 0 0;
+    min-width: 14px;
 
     path {
         stroke: $dark;
