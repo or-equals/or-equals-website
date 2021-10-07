@@ -28,7 +28,7 @@ const Main = () => {
             </div>
             <div className='main-img'>
                 <Image
-                    src='/patient_pilot_award-min.png'
+                    src='/patient_pilot_award-min.webp'
                     alt='Patient Pilot Award'
                     height={355}
                     width={510}
