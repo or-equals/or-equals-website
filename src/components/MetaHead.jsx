@@ -6,6 +6,7 @@ const MetaHead = () => {
         <Head>
             <title>Or Equals - Award Winning Business Software Development</title>
             <meta name="description" content="We are Elixir software development consultants who specialize in delivering massive cost reductions to business owners by eliminating time-intensive processes." />
+            <meta name="theme-color" content="#FFCC00" />
 
             {/* OGP Tags */}
             <meta property="og:title" content="Or Equals - Award Winning Business Software Development" />
