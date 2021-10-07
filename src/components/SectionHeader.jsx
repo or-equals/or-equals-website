@@ -11,14 +11,14 @@ const SectionHeader = ({ theme, title, desc }) => {
             </Fade>
             {desc
                 ? <div className='section-desc__container'>
-                <svg className={`section-svg_${theme}`} width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path d='M19 8H1M12 1L19 8L12 1ZM19 8L12 15L19 8Z' stroke='#ffffff' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+                    <svg className={`section-svg_${theme}`} width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M19 8H1M12 1L19 8L12 1ZM19 8L12 15L19 8Z' stroke='#ffffff' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
                     </svg>
-                    <Fade bottom distance='20px' duration={800}>
+                    <Fade bottom distance='20px' duration={400}>
                         <p className={`section-desc_${theme}`}>{desc}</p>
                     </Fade>
-                </div> 
-                : null     
+                </div>
+                : null
             }
 
         </div>

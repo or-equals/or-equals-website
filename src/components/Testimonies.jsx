@@ -29,7 +29,7 @@ const Testimonies = ({ items }) => {
         <section className='testimonials-section'>
             <div className='testimonials-container'>
                 <div className='testimonials-header'>
-                    <Fade bottom distance='20px' duration={400}>
+                    <Fade bottom distance='20px' duration={200}>
                         <h2 className='testimonials-title'>Take a look at <span className='underline-container'>what our clients say</span> about our services.</h2>
                     </Fade>
                     <div className='testimonials-control'>

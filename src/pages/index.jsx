@@ -30,6 +30,9 @@ const Home = ({ projects, testimonies }) => {
 
 export default Home;
 
+
+// Get data from CMS
+
 export async function getStaticProps() {
 
     const contentfulClient = createClient({

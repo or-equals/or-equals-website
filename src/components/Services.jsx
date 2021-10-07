@@ -18,26 +18,26 @@ const Services = () => {
         >
             <div className="services-container">
                 <div className='service'>
-                    <Fade bottom distance='20px' duration={400}>
+                    <Fade bottom distance='20px' duration={200}>
                         <h3 className='service-title service-highlight'>Project Rescue</h3>
                     </Fade>
-                    <Fade bottom distance='20px' duration={800}>
+                    <Fade bottom distance='20px' duration={400}>
                         <p className='service-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad placeat vitae nobis asperiores voluptate aperiam incidunt, autem dolor possimus accusamus.</p>
                     </Fade>
                 </div>
                 <div className='service'>
-                    <Fade bottom distance='20px' duration={400}>
+                    <Fade bottom distance='20px' duration={200}>
                         <h3 className='service-title'>Custom Software</h3>
                     </Fade>
-                    <Fade bottom distance='20px' duration={800}>
+                    <Fade bottom distance='20px' duration={400}>
                         <p className='service-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad placeat vitae nobis asperiores voluptate aperiam incidunt, autem dolor possimus accusamus.</p>
                     </Fade>
                 </div>
                 <div className='service'>
-                    <Fade bottom distance='20px' duration={400}>
+                    <Fade bottom distance='20px' duration={200}>
                         <h3 className='service-title'>Performance Consulting</h3>
                     </Fade>
-                    <Fade bottom distance='20px' duration={800}>
+                    <Fade bottom distance='20px' duration={400}>
                         <p className='service-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad placeat vitae nobis asperiores voluptate aperiam incidunt, autem dolor possimus accusamus.</p>
                     </Fade>
                 </div>

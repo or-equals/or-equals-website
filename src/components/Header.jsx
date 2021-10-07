@@ -15,7 +15,7 @@ const Header = () => {
     useEffect(() => {
         if (typeof window != 'undefined') {
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 620) setTheme('dark');
+                if (window.scrollY > 639) setTheme('dark');
                 else setTheme('light');
             });
         };
@@ -96,35 +96,35 @@ const Header = () => {
                     <div className='responsive-nav'>
                         <Link href='/'>
                             <a onClick={scrollTopAndCloseMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={400}>
+                                <Fade bottom distance='20px' duration={200}>
                                     Home
                                 </Fade>
                             </a>
                         </Link>
                         <Link href='#services'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={500}>
+                                <Fade bottom distance='20px' duration={300}>
                                     Services
                                 </Fade>
                             </a>
                         </Link>
                         <Link href='#work'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={600}>
+                                <Fade bottom distance='20px' duration={400}>
                                     Work
                                 </Fade>
                             </a>
                         </Link>
                         <Link href='#about'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={700}>
+                                <Fade bottom distance='20px' duration={500}>
                                     About
                                 </Fade>
                             </a>
                         </Link>
                         <Link href='#contact'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={800}>
+                                <Fade bottom distance='20px' duration={600}>
                                     Contact
                                 </Fade>
                             </a>

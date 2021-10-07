@@ -42,10 +42,12 @@
 
 .header-logo_light {
     fill: $dark;
+    transition: .2s;
 }
 
 .header-logo_dark {
     fill: $light;
+    transition: .2s;
 }
 
 .nav {
