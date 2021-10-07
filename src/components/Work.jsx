@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { useEmblaCarousel } from 'embla-carousel/react';
-import Fade from 'react-reveal/Fade';
-import config from 'react-reveal/globals';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Section from '../components/Section';
+import Project from '../components/Project';
 
-config({ ssrFadeout: true });
+const Work = ({ items }) => {
 
-const Work = () => {
+    console.log(items);
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
         draggable: false,
@@ -22,31 +22,25 @@ const Work = () => {
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
     }, [emblaApi])
+
     return (
         <Section
             id="work"
             theme="light"
-            title={<>Our customers <span className='underline'>streamline their tedious processes</span> with bespoke software.</>}
+            title={<>Our customers <span className='underline-container'>streamline their tedious processes</span> with bespoke software.</>}
             desc="Here are a few projects that we've done over the years."
         >
             <div className='embla' ref={emblaRef}>
                 <div className="embla__container">
-                    <div className="embla__slide">
-                        <Project
-                            name="ZenCase"
-                            desc="We worked with ZenCase for 2 years to turn a back-office full-stack Rails application into a separate EmberJS frontend that communicates with a Rails API. We think that they have a very powerful piece of software with the potential to disrupt the legal space."
-                            summary="After the software build, TJ's law firm was able to double billable time across his entire team."
-                            videoLink="https://www.youtube.com/embed/jC8niM6jgyY"
-                        />
-                    </div>
-                    <div className="embla__slide">
-                        <Project
-                            name="ZenCase"
-                            desc="We worked with ZenCase for 2 years to turn a back-office full-stack Rails application into a separate EmberJS frontend that communicates with a Rails API. We think that they have a very powerful piece of software with the potential to disrupt the legal space."
-                            summary="After the software build, TJ's law firm was able to double billable time across his entire team."
-                            videoLink="https://www.youtube.com/embed/jC8niM6jgyY"
-                        />
-                    </div>
+                    {items.map(project => (
+                        <div className="embla__slide" key={project.fields.title}>
+                            <Project
+                                name={project.fields.title}
+                                desc={documentToReactComponents(project.fields.desc)}
+                                videoLink={project.fields.videoLink}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className='projects-control'>
@@ -66,30 +60,3 @@ const Work = () => {
 };
 
 export default Work;
-
-const Project = ({ name, desc, summary, videoLink }) => {
-    return (
-        <div className='project'>
-            <div className='project-text'>
-                <Fade bottom distance='20px' duration={400}>
-                    <h3 className='project-title'>{name}</h3>
-                </Fade>
-                <Fade bottom distance='20px' duration={800}>
-                    <p className='project-desc'>{desc}</p>
-                </Fade>
-                <Fade bottom distance='20px' duration={1000}>
-                    <p className='project-desc'>{summary}</p>
-                </Fade>
-            </div>
-            <iframe
-                className='project-video'
-                height='340' src={videoLink}
-                title='YouTube video player'
-                frameBorder='0'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowFullScreen
-            >
-            </iframe>
-        </div>
-    );
-};

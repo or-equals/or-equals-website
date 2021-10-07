@@ -13,7 +13,7 @@ const Services = () => {
         <Section
             id="services"
             theme="dark"
-            title={<>Instead of spending money on software, lets build <span className='underline-dark'>software that makes you money.</span></>}
+            title={<>Instead of spending money on software, lets build software that makes you money.</>}
             desc="From rescuing a project, to augmenting your team, or making your business more efficient, we've got you covered."
         >
             <div className="services-container">

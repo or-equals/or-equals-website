@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.4.0",
+    "@contentful/rich-text-types": "^15.3.6",
+    "contentful": "^9.0.3",
     "embla-carousel": "^4.5.3",
     "next": "11.1.2",
     "react": "17.0.2",

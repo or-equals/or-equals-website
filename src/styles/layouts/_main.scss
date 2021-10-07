@@ -115,6 +115,14 @@
 
 .project-desc {
     color: $light-text_main;
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: $yellow;
+    }
 }
 
 .embla {
@@ -189,6 +197,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 
 .testimony-text {
@@ -215,11 +224,18 @@
 .user-avatar {
     height: 60px;
     width: 60px;
+    border-radius: 99px;
 
     svg {
         height: inherit;
         width: inherit;
     }
+}
+
+.user-avatar_img {
+    height: 60px;
+    width: 60px;
+    border-radius: 99px;
 }
 
 .project-video {
@@ -246,6 +262,11 @@
 
 .user-socials {
     margin: auto 0;
+
+    svg {
+        height: 30px;
+        width: auto;
+    }
 }
 
 @media (max-width: 1226px) {

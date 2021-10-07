@@ -5,29 +5,12 @@
     padding: 160px 0;
 }
 
-.underline,
-.underline-dark {
-    position: relative;
-    z-index: 10;
-
-    &::before {
-        content: '';
-        width: 100%;
-        height: clamp(8px, 4vw, 20px);
-        background-color: $yellow;
-        position: absolute;
-        bottom: 4px;
-        left: 0;
-        z-index: -10;
-    }
-}
-
-.underline-dark {
-    color: $yellow;
-
-    &::after {
-        background-color: transparent;
-    }
+.underline-container {
+    display: inline;
+    background-image: linear-gradient(to left, $yellow, $yellow);
+    background-position: 0 clamp(18px, 3vw, 36px);
+    background-size: auto 16px;
+    background-repeat: repeat-x;
 }
 
 .section_dark {

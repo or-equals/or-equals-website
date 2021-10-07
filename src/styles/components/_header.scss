@@ -36,39 +36,16 @@
     }
 }
 
-.header-logo_light {
+.header-logo {
     cursor: pointer;
+}
 
-    path {
-        fill: $dark;
-        transition: .2s;
-    }
-
-    &:hover {
-        path {
-            transform: .2s;
-            fill: $yellow;
-            transition: .2s;
-        }
-    }
+.header-logo_light {
+    fill: $dark;
 }
 
 .header-logo_dark {
-    cursor: pointer;
-
-    path {
-        fill: $light;
-        transition: .2s;
-    }
-
-    &:hover {
-        transform: .2s;
-
-        path {
-            fill: $yellow;
-            transition: .2s;
-        }
-    }
+    fill: $light;
 }
 
 .nav {
