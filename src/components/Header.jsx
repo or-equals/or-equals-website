@@ -7,13 +7,24 @@ const Header = ({ mainHeight }) => {
 
     const [theme, setTheme] = useState('light');
     const [menu, setMenu] = useState(false);
+    const [margin, setMargin] = useState();
 
     // Change color based on height value = margin.
     useEffect(() => {
         if (typeof window != 'undefined') {
 
+            if (window.document.documentElement.clientWidth <= 1226) {
+                setMargin(120)
+            } else if (window.document.documentElement.clientWidth <= 600) {
+                setMargin(40)
+            } else {
+                setMargin(280)
+            }
+
+            console.log(window.document.documentElement.clientWidth);
+
             window.addEventListener('scroll', () => {
-                if (window.scrollY > mainHeight + 280) setTheme('dark');
+                if (window.scrollY > mainHeight + margin) setTheme('dark');
                 else setTheme('light');
             });
         };
