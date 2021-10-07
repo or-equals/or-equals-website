@@ -1,9 +1,4 @@
-import Fade from 'react-reveal/Fade';
-import config from 'react-reveal/globals';
-
 import Section from '../components/Section';
-
-config({ ssrFadeout: true });
 
 const About = () => {
 
@@ -18,20 +13,12 @@ const About = () => {
         >
             <div className='about-container'>
                 <div className='about'>
-                    <Fade bottom distance='20px' duration={200}>
-                        <h3 className='about-title'>Who We Are</h3>
-                    </Fade>
-                    <Fade bottom distance='20px' duration={400}>
-                        <p className='about-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, repellendus consequuntur! Autem, ducimus nesciunt adipisci officiis quos exercitationem, qui facilis deserunt ipsum autem dignissimos recusandae aliquam quaerat ullam odit consectetur alias!</p>
-                    </Fade>
+                    <h3 className='about-title'>Who We Are</h3>
+                    <p className='about-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, repellendus consequuntur! Autem, ducimus nesciunt adipisci officiis quos exercitationem, qui facilis deserunt ipsum autem dignissimos recusandae aliquam quaerat ullam odit consectetur alias!</p>
                 </div>
                 <div className='about'>
-                    <Fade bottom distance='20px' duration={200}>
-                        <h3 className='about-title'>Our Promise</h3>
-                    </Fade>
-                    <Fade bottom distance='20px' duration={400}>
-                        <p className='about-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, repellendus consequuntur! Autem, ducimus nesciunt adipisci officiis quos exercitationem, qui facilis deserunt ipsum autem dignissimos recusandae aliquam quaerat ullam odit consectetur alias!</p>
-                    </Fade>
+                    <h3 className='about-title'>Our Promise</h3>
+                    <p className='about-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, repellendus consequuntur! Autem, ducimus nesciunt adipisci officiis quos exercitationem, qui facilis deserunt ipsum autem dignissimos recusandae aliquam quaerat ullam odit consectetur alias!</p>
                 </div>
             </div>
         </Section>

@@ -1,9 +1,6 @@
 import { useCallback } from 'react';
 import { useEmblaCarousel } from 'embla-carousel/react';
-import Fade from 'react-reveal/Fade';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-
-import Image from 'next/image';
 
 import TestimonyCard from './TestimonyCard';
 
@@ -29,9 +26,7 @@ const Testimonies = ({ items }) => {
         <section className='testimonials-section'>
             <div className='testimonials-container'>
                 <div className='testimonials-header'>
-                    <Fade bottom distance='20px' duration={200}>
-                        <h2 className='testimonials-title'>Take a look at <span className='underline-container'>what our clients say</span> about our services.</h2>
-                    </Fade>
+                    <h2 className='testimonials-title'>Take a look at <span className='underline-container'>what our clients say</span> about our services.</h2>
                     <div className='testimonials-control'>
                         <button className='prev-button' onClick={scrollPrevTestimony}>
                             <span>

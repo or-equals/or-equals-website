@@ -1,8 +1,4 @@
 import { openPopupWidget } from 'react-calendly';
-import config from 'react-reveal/globals';
-import Fade from 'react-reveal/Fade';
-
-config({ ssrFadeout: true });
 
 import Link from 'next/link';
 
@@ -22,9 +18,7 @@ const Footer = () => {
         <footer className='footer' id='contact'>
             <div className='footer-container'>
                 <div className='footer-main'>
-                    <Fade bottom distance='20px' duration={200}>
-                        <h2 className='footer-title'><span className='underline-dark'>Ready to elevate</span> your business? Schedule an appointment with us today.</h2>
-                    </Fade>
+                    <h2 className='footer-title'><span className='underline-dark'>Ready to elevate</span> your business? Schedule an appointment with us today.</h2>
                     <button
                         className='button_yellow'
                         onClick={openCalendly}
@@ -33,92 +27,64 @@ const Footer = () => {
                     </button>
                     <div className='footer-links'>
                         <nav className='footer-list'>
-                            <Fade bottom distance='20px' duration={200}>
-                                <h6 className='footer-list__title'>Links</h6>
-                            </Fade>
+                            <h6 className='footer-list__title'>Links</h6>
                             <Link href="/">
                                 <a className='footer-list__link' onClick={scrollTop}>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        Home
-                                    </Fade>
+                                    Home
                                 </a>
                             </Link>
                             <Link href="#services">
                                 <a className='footer-list__link'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        Services
-                                    </Fade>
+                                    Services
                                 </a>
                             </Link>
                             <Link href="#work">
                                 <a className='footer-list__link'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        Work
-                                    </Fade>
+                                    Work
                                 </a>
                             </Link>
                             <Link href="#about">
                                 <a className='footer-list__link'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        About
-                                    </Fade>
+                                    About
                                 </a>
                             </Link>
                             <Link href="#contact">
                                 <a className='footer-list__link'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        Contact
-                                    </Fade>
+                                    Contact
                                 </a>
                             </Link>
                         </nav>
                         <nav className='footer-list'>
-                            <Fade bottom distance='20px' duration={200}>
-                                <h6 className='footer-list__title'>Socials</h6>
-                            </Fade>
+                            <h6 className='footer-list__title'>Socials</h6>
                             <Link href="https://twitter.com/joshuaplicque">
                                 <a className='footer-list__link' target='_blank' rel='noreferrer'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        Twitter
-                                    </Fade>
+                                    Twitter
                                 </a>
                             </Link>
                             <Link href="https://www.youtube.com/channel/UCFQRl_6qzOpPGVtrFw7a_Jw">
                                 <a className='footer-list__link' target='_blank' rel='noreferrer'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        YouTube
-                                    </Fade>
+                                    YouTube
                                 </a>
                             </Link>
                             <Link href="https://www.linkedin.com/company/or-equals">
                                 <a className='footer-list__link' target='_blank' rel='noreferrer'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        LinkedIn
-                                    </Fade>
+                                    LinkedIn
                                 </a>
                             </Link>
                         </nav>
                         <div>
                             <div className='footer-list'>
-                                <Fade bottom distance='20px' duration={200}>
-                                    <h6 className='footer-list__title'>Email</h6>
-                                </Fade>
+                                <h6 className='footer-list__title'>Email</h6>
                                 <Link href="mailto:hello@orequals.com">
                                     <a className='footer-list__link'>
-                                        <Fade bottom distance='20px' duration={300}>
-                                            hello@orequals.com
-                                        </Fade>
+                                        hello@orequals.com
                                     </a>
                                 </Link>
                             </div>
                             <div className='footer-list'>
-                                <Fade bottom distance='20px' duration={200}>
-                                    <h6 className='footer-list__title'>Phone</h6>
-                                </Fade>
+                                <h6 className='footer-list__title'>Phone</h6>
                                 <a className='footer-list__link'>
-                                    <Fade bottom distance='20px' duration={300}>
-                                        +1 999-8888-777
-                                    </Fade>
+                                    +1 999-8888-777
                                 </a>
                             </div>
                         </div>

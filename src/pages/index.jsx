@@ -1,8 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import config from 'react-reveal/globals';
 import { createClient } from 'contentful';
-
-config({ ssrFadeout: true });
 
 import MetaHead from '../components/MetaHead';
 import Main from '../components/Main';

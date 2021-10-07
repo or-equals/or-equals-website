@@ -1,11 +1,6 @@
-import Fade from 'react-reveal/Fade';
-import config from 'react-reveal/globals';
-
 import Image from 'next/image';
 
 import Button from './Button';
-
-config({ ssrFadeout: true });
 
 const Main = () => {
 
@@ -14,12 +9,8 @@ const Main = () => {
     return (
         <main className='main' id='main'>
             <div className='main-text'>
-                <Fade bottom distance='20px' duration={200}>
-                    <h1 className='main-headline'>Award-Winning Business Software Development</h1>
-                </Fade>
-                <Fade bottom distance='20px' duration={300}>
-                    <p className='main-desc'>We are Elixir software development consultants who specialize in delivering massive cost reductions to business owners by eliminating time-intensive processes.</p>
-                </Fade>
+                <h1 className='main-headline'>Award-Winning Business Software Development</h1>
+                <p className='main-desc'>We are Elixir software development consultants who specialize in delivering massive cost reductions to business owners by eliminating time-intensive processes.</p>
                 <Button
                     to="#contact"
                     theme="dark"

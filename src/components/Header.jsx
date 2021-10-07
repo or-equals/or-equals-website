@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 import { openPopupWidget } from 'react-calendly';
-import config from 'react-reveal/globals';
-import Fade from 'react-reveal/Fade';
-
-config({ ssrFadeout: true });
 
 import Link from 'next/link';
 
@@ -100,37 +96,27 @@ const Header = ({ mainHeight }) => {
                     <div className='responsive-nav'>
                         <Link href='/'>
                             <a onClick={scrollTopAndCloseMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={200}>
-                                    Home
-                                </Fade>
+                                Home
                             </a>
                         </Link>
                         <Link href='#services'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={300}>
-                                    Services
-                                </Fade>
+                                Services
                             </a>
                         </Link>
                         <Link href='#work'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={400}>
-                                    Work
-                                </Fade>
+                                Work
                             </a>
                         </Link>
                         <Link href='#about'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={500}>
-                                    About
-                                </Fade>
+                                About
                             </a>
                         </Link>
                         <Link href='#contact'>
                             <a onClick={closeMenu} className='responsive-nav__link'>
-                                <Fade bottom distance='20px' duration={600}>
-                                    Contact
-                                </Fade>
+                                Contact
                             </a>
                         </Link>
                     </div>
