@@ -1,3 +1,4 @@
+import { Fade } from 'react-reveal';
 import { openPopupWidget } from 'react-calendly';
 
 import Link from 'next/link';
@@ -18,13 +19,17 @@ const Footer = () => {
         <footer className='footer' id='contact'>
             <div className='footer-container'>
                 <div className='footer-main'>
-                    <h2 className='footer-title'><span className='underline-dark'>Ready to elevate</span> your business? Schedule an appointment with us today.</h2>
-                    <button
-                        className='button_yellow'
-                        onClick={openCalendly}
-                    >
-                        Schedule an appointment
-                    </button>
+                    <Fade duration={200} distance='20px' bottom>
+                        <h2 className='footer-title'><span className='underline-dark'>Ready to elevate</span> your business? Schedule an appointment with us today.</h2>
+                    </Fade>
+                    <Fade duration={400} distance='20px' bottom>
+                        <button
+                            className='button_yellow'
+                            onClick={openCalendly}
+                        >
+                            Schedule an appointment
+                        </button>
+                    </Fade>
                     <div className='footer-links'>
                         <nav className='footer-list'>
                             <h6 className='footer-list__title'>Links</h6>

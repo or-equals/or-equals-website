@@ -61,12 +61,6 @@
     position: relative;
     transition: .2s;
 
-    &::before {
-        content: '/';
-        position: absolute;
-        left: -16px;
-    }
-
     &:first-child {
         &::before {
             content: '';
@@ -159,6 +153,11 @@
 }
 
 @media (max-width: 600px) {
+
+    .header-logo {
+        height: 24px;
+        width: auto;
+    }
 
     .nav {
         display: none;

@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { Fade } from 'react-reveal';
 import { useEmblaCarousel } from 'embla-carousel/react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -26,7 +27,9 @@ const Testimonies = ({ items }) => {
         <section className='testimonials-section'>
             <div className='testimonials-container'>
                 <div className='testimonials-header'>
-                    <h2 className='testimonials-title'>Take a look at <span className='underline-container'>what our clients say</span> about our services.</h2>
+                    <Fade duration={200} distance='20px' bottom>
+                        <h2 className='testimonials-title'>Take a look at <span className='underline-container'>what our clients say</span> about our services.</h2>
+                    </Fade>
                     <div className='testimonials-control'>
                         <button className='prev-button' onClick={scrollPrevTestimony}>
                             <span>
@@ -48,14 +51,16 @@ const Testimonies = ({ items }) => {
                     <div className='embla__container'>
                         {items.map(testimony => (
                             <div className='embla__slide' id='testimony-slide'>
-                                <TestimonyCard
-                                    testimony={documentToReactComponents(testimony.fields.testimony)}
-                                    name={testimony.fields.name}
-                                    designation={testimony.fields.designation}
-                                    profileImage={testimony.fields.profileImage ? `https://${testimony.fields.profileImage.fields.file.url.slice(2)}` : null}
-                                    twitter={testimony.fields.twitterLink ? testimony.fields.twitterLink : null}
-                                    linkedin={testimony.fields.linkedInLink ? testimony.fields.linkedInLink : null}
-                                />
+                                <Fade duration={400} distance='20px' bottom>
+                                    <TestimonyCard
+                                        testimony={documentToReactComponents(testimony.fields.testimony)}
+                                        name={testimony.fields.name}
+                                        designation={testimony.fields.designation}
+                                        profileImage={testimony.fields.profileImage ? `https://${testimony.fields.profileImage.fields.file.url.slice(2)}` : null}
+                                        twitter={testimony.fields.twitterLink ? testimony.fields.twitterLink : null}
+                                        linkedin={testimony.fields.linkedInLink ? testimony.fields.linkedInLink : null}
+                                    />
+                                </Fade>
                             </div>
                         ))}
                     </div>
